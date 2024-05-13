@@ -1,0 +1,24 @@
+extends layout.pug
+
+block head
+  script(src="/js/main.js")
+  
+block content
+  nav#navbar
+    a(href="/") Anti-Social Social Site
+
+  .register-form
+    form(method='post', action='/register')
+      p
+        label(for='username') Username:
+      p
+        input#username(type='text', name='username', required)
+      p
+        label(for='password') Password:
+      p
+        input#password(type='password', name='password', required)
+
+      p
+        button(type='submit') Register
+      
+      

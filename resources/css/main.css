@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EEF4ED;
+  font-family: 'Playfair Display', serif;
+}
+
+textarea {
+  resize: none;
+  display: block;
+  width: 30em;
+  height: 3em;
+}
+
+#navbar {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #0B2545;
+  box-sizing: border-box;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  border: 1px solid #EEF4ED;
+  border-radius: 10px;
+  background: #134074;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+#navbar a:hover {
+  background-color: #8DA9C4;
+}
+
+
+.post-form, .login-form, .register-form {
+  display: flex;
+  width: 50vw;
+  align-items: center;
+  padding: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  background-color: #8DA9C4;
+ 
+  box-sizing: border-box;
+}
+
+
+
+
+.post {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border: 2px solid #EEF4ED;
+  border-radius: 10px;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: #8DA9C4;
+  
+  /* max-width: calc(50% - 20px); */
+  margin: 20px;
+ 
+}
+
+
+#post-content {
+  text-align: center;
+}
+
+#post-likes {
+  text-align: right;
+}
+
+#likeCount {
+  color: #EEF4ED;
+  font-weight: bold;
+}
+
+.likePost, .deletePost, .editPost {
+  color: #EEF4ED;
+  background-color: #134074;
+  border: 1px solid #EEF4ED;
+  border-radius: 10px;
+  padding: .5em;
+  margin: .5em;
+}
+
+.likePost:hover, .deletePost:hover, .editPost:hover {
+  color: black;
+  background-color: #eef4ed;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+/* https://www.w3schools.com/howto/howto_css_pagination.asp */
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.sort-posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.sort-posts select, .sort-posts button{
+  margin: 0 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: 1px solid #EEF4ED;
+  background-color: #8DA9C4;
+  color: #EEF4ED;
+}
+
+
+a {
+  text-decoration: none;
+  color: #134074;
+}

@@ -1,0 +1,58 @@
+extends layout.pug
+
+block head
+  script(src="/js/main.js")
+
+block content
+  nav#navbar
+    a(href="/") Anti-Social Social Site
+    if user
+      a(href="/logout") Logout
+    else
+      a(href="/login") Login
+
+  .post-form
+    form(method='post', action='/submit')
+      p
+        textarea(type='text', name='newPost', id='newPost', placeholder='Create New Post', maxlength="60", required)
+      p
+        if user
+          button(type='submit') Post
+        else
+          button(type='submit', disabled) Login to start posting
+
+  
+
+  .sort-posts
+    form(method='post', action='/')
+
+      p Sort by:
+        select(name='sort')
+          option(value='new') Newest
+          option(value='likes') Most Likes
+      p
+        button(type='submit') Sort
+
+
+  if posts.length > 0
+    each post in posts
+      .post(id=post.id)
+        p#post-content #{post.content}
+        p#post-likes
+          if user
+            button.likePost(type='submit', data-id=post.id) Like
+          span#likeCount #{post.likes}
+
+        if user 
+          p
+            button.deletePost(type='submit', data-id=post.id) Delete
+            button.editPost(type='submit', data-id=post.id) Edit 
+
+  if page 
+    .pagination
+      if page>=2
+        a(href="/?page="+(page-1)) &laquo; 
+      a.active(href="/?page="+page) #{page}
+      a(href="/?page="+(page+1)) &raquo;
+  
+  
