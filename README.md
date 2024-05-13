@@ -15,7 +15,7 @@ Features Implemented:
   - User's are able to delete/update any post anyone has created (wasn't able to figure out how to make so they can only edit/delete their own posts)
 
 
-
+####
 schema.sql: contains the commands used to create the tables to store user information and posts
 data.js: contians functions used by 'server.js' to interact with the database
 
